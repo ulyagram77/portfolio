@@ -24,12 +24,14 @@ import {
     githubContacts,
     instagramContacts,
     cv,
+    typescript,
+    firebase,
 } from '../assets';
 
 export const navLinks = [
     {
-        id: 'about',
-        title: 'navbar.links.about',
+        id: 'work',
+        title: 'navbar.links.experience',
     },
     {
         id: 'works',
@@ -72,6 +74,11 @@ const technologies = [
     },
 
     {
+        name: 'TypeScript',
+        icon: typescript,
+    },
+
+    {
         name: 'React JS',
         icon: reactjs,
     },
@@ -83,17 +90,20 @@ const technologies = [
         name: 'Tailwind CSS',
         icon: tailwind,
     },
-
     {
         name: 'Three JS',
         icon: threejs,
     },
     {
-        name: 'git',
+        name: 'Firebase',
+        icon: firebase,
+    },
+    {
+        name: 'Git',
         icon: git,
     },
     {
-        name: 'figma',
+        name: 'Figma',
         icon: figma,
     },
 ];

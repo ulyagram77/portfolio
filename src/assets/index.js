@@ -13,10 +13,12 @@ import figma from './tech/figma.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
 import javascript from './tech/javascript.png';
+import typescript from './tech/typescript.png';
 import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import threejs from './tech/threejs.svg';
+import firebase from './tech/firebase.png';
 
 import step from './company/step.png';
 import udemy from './company/udemy.png';
@@ -74,4 +76,6 @@ export {
     githubContacts,
     instagramContacts,
     telegramContacts,
+    typescript,
+    firebase,
 };
