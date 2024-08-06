@@ -1,2 +1,4 @@
 import MenuIcon from './MenuIcon/MenuIcon';
-export { MenuIcon };
+import Progress from './Progress/Progress';
+
+export { MenuIcon, Progress };

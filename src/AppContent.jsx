@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from './components/waiters';
+import { Progress } from './components/ui';
 
 const Hero = lazy(() => import('components/sections/Hero.jsx'));
 const About = lazy(() => import('components/sections/About.jsx'));
@@ -14,6 +15,7 @@ const StarsCanvas = lazy(() => import('components/canvas/Stars.jsx'));
 const AppContent = () => {
     return (
         <BrowserRouter>
+            <Progress />
             <main className="relative z-0 bg-primary">
                 <section className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                     <Navbar />
