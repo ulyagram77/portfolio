@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { lazy } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +11,17 @@ import { textVariant, fadeIn } from 'src/utils/motion';
 import { styles } from 'src/styles/styles';
 
 const BallCanvas = lazy(() => import('../canvas/Ball'));
+
+const TechMobile = ({ icon, name }) => {
+    return (
+        <div className="flex flex-col justify-center items-center gap-5 w-40 h-50 bg-tertiary p-5 rounded-2xl border-b-2 border-white">
+            <div className="w-30">
+                <img src={icon} className="w-full" alt="tech" />
+            </div>
+            <p className="text-secondary text-[17px] text-center">{name}</p>
+        </div>
+    );
+};
 
 const Tech = withSectionWrapper(() => {
     const { isDesktop } = useMathcMedia();
@@ -28,22 +41,23 @@ const Tech = withSectionWrapper(() => {
                 variants={fadeIn('bottom', 'spring', 0.5, 0.75)}
                 className="flex flex-row flex-wrap justify-center gap-10"
             >
-                {technologies.map(technology => (
-                    <div className="w-28 h-28" key={technology.name}>
-                        {!isDesktop ? (
-                            <img
-                                src={technology.icon}
-                                alt="tech"
-                                className="bg-tertiary p-5 rounded-2xl border-b-2 border-white"
-                            />
-                        ) : (
+                {technologies.map(technology =>
+                    !isDesktop ? (
+                        <TechMobile {...technology} key={technology.name} />
+                    ) : (
+                        <div className="w-28 h-28" key={technology.name}>
                             <BallCanvas icon={technology.icon} />
-                        )}
-                    </div>
-                ))}
+                        </div>
+                    ),
+                )}
             </motion.div>
         </>
     );
 });
+
+TechMobile.propTypes = {
+    icon: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+};
 
 export default Tech;

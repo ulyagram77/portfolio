@@ -58,7 +58,7 @@ const ProjectCard = ({
 
                 <div className="mt-5">
                     <h3 className="text-white font-bold text-[24px]">{name}</h3>
-                    <p className="mt-2 text-secondary text-[14px]">
+                    <p className="h-[90px] mt-2 text-secondary text-[14px] overflow-auto custom-scroll">
                         {t(description)}
                     </p>
                 </div>

@@ -10,7 +10,7 @@ const styles = {
 const Preloader = () => {
     return (
         <div style={styles}>
-            <PuffLoader color="#FFDE59" size={200} />
+            <PuffLoader color="#915eff" size={300} />
         </div>
     );
 };

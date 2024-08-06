@@ -107,7 +107,7 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className={`${
                             !toggle ? 'hidden' : 'flex'
-                        } p-6 violet-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+                        } p-6 menu-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
                         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
                             {navLinks.map(nav => (

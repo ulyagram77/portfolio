@@ -9,11 +9,11 @@ import { CanvasLoader } from '../waiters';
 const Ball = props => {
     const [decal] = useTexture([props.imgUrl]);
     return (
-        <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-            <ambientLight intensity={0.2} />
-            <directionalLight position={[0, 0, 0.05]} />
+        <Float speed={3} rotationIntensity={1} floatIntensity={1}>
+            <ambientLight intensity={0.1} />
+            <directionalLight position={[0, 0, 0.06]} />
             <mesh castShadow receiveShadow scale={2.75}>
-                <icosahedronGeometry args={[1, 1]} />
+                <icosahedronGeometry args={[1, 2]} />
                 <meshStandardMaterial
                     color="#fff8eb"
                     polygonOffset
@@ -39,6 +39,7 @@ const BallCanvas = ({ icon }) => {
                 <OrbitControls
                     enableZoom={false}
                     enablePan={false}
+                    enableRotate={false}
                     minPolarAngle={Math.PI / 4}
                     maxPolarAngle={Math.PI / 1.35}
                     minAzimuthAngle={-Math.PI / 4}
