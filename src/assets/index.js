@@ -5,8 +5,6 @@ import mobile from './mobile.png';
 import web from './web.png';
 import github from './github.png';
 import demo from './demo.svg';
-import menu from './menu.svg';
-import close from './close.svg';
 
 import css from './tech/css.png';
 import figma from './tech/figma.png';
@@ -49,8 +47,6 @@ export {
     web,
     github,
     demo,
-    menu,
-    close,
     css,
     figma,
     git,

@@ -67,7 +67,7 @@ const ProjectCard = ({
                     {tags.map(tag => (
                         <div
                             key={`${name}-${tag.name}`}
-                            className="bg-primary rounded-2xl px-3"
+                            className="bg-primary rounded-2xl px-3 py-0.5"
                         >
                             <p className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
                         </div>
@@ -101,7 +101,7 @@ const Works = withSectionWrapper(() => {
                 ></motion.p>
             </div>
 
-            <div className="mt-20 flex flex-wrap gap-7">
+            <div className="mt-20 flex justify-center items-center flex-wrap gap-7  xl:justify-start">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={`project-${index}`}

@@ -6,14 +6,46 @@ import { motion } from 'framer-motion';
 import { useMathcMedia } from 'src/hooks';
 import { styles } from 'styles/styles';
 import { navLinks } from 'src/constants';
-import { logo, menu, close } from 'src/assets';
+import { logo } from 'src/assets';
+import { MenuIcon } from '../ui';
+
+const LangButtons = () => {
+    const { i18n } = useTranslation();
+
+    const changeLanguage = language => {
+        i18n.changeLanguage(language);
+    };
+
+    const currentLanguage = i18n.language;
+
+    const setButtonClass = language =>
+        `transition-all ${currentLanguage === language ? 'text-[#915eff] font-bold' : ''}`;
+
+    return (
+        <div className="ml-10 flex gap-2">
+            <button
+                onClick={() => changeLanguage('en')}
+                className={setButtonClass('en')}
+            >
+                EN
+            </button>
+            <div>|</div>
+            <button
+                onClick={() => changeLanguage('ua')}
+                className={setButtonClass('ua')}
+            >
+                UA
+            </button>
+        </div>
+    );
+};
 
 const Navbar = () => {
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const { isDesktop } = useMathcMedia();
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,10 +61,6 @@ const Navbar = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const changeLanguage = language => {
-        i18n.changeLanguage(language);
-    };
 
     return (
         <nav
@@ -85,21 +113,10 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {!isDesktop && (
-                    <div className="ml-10 flex gap-2">
-                        <button onClick={() => changeLanguage('en')}>EN</button>
-                        <div>|</div>
-                        <button onClick={() => changeLanguage('ua')}>UA</button>
-                    </div>
-                )}
+                {!isDesktop && <LangButtons />}
 
                 <div className="lg:hidden flex justify-end items-center">
-                    <img
-                        src={toggle ? close : menu}
-                        alt="menu"
-                        className="w-[28px] h-[28px] object-contain"
-                        onClick={() => setToggle(!toggle)}
-                    />
+                    <MenuIcon open={toggle} setOpen={() => setToggle(!toggle)} />
 
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
@@ -107,9 +124,9 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className={`${
                             !toggle ? 'hidden' : 'flex'
-                        } p-6 menu-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+                        }  p-6 menu-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
-                        <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+                        <ul className="list-none flex justify-center items-center flex-1 flex-col gap-4">
                             {navLinks.map(nav => (
                                 <li
                                     key={nav.id}
@@ -141,13 +158,7 @@ const Navbar = () => {
                     </motion.div>
                 </div>
 
-                {isDesktop && (
-                    <div className="ml-10 flex gap-2">
-                        <button onClick={() => changeLanguage('en')}>EN</button>
-                        <div>|</div>
-                        <button onClick={() => changeLanguage('ua')}>UA</button>
-                    </div>
-                )}
+                {isDesktop && <LangButtons />}
             </div>
         </nav>
     );
