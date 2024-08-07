@@ -32,10 +32,8 @@ const Progress = () => {
         };
 
         window.addEventListener('scroll', optimizedHandleScroll);
-        window.addEventListener('touchmove', optimizedHandleScroll);
         return () => {
             window.removeEventListener('scroll', optimizedHandleScroll);
-            window.removeEventListener('touchmove', optimizedHandleScroll);
         };
     }, []);
 
