@@ -1,19 +1,30 @@
-import { Portal } from 'src/components/waiters';
-import './Progress.css';
+import { Portal } from '@/components/common';
 import { useEffect, useRef } from 'react';
+import './Progress.css';
 
 const Progress = () => {
     const progressRef = useRef();
 
     useEffect(() => {
         const handleScroll = () => {
-            const totalScroll =
-                document.documentElement.scrollHeight -
-                document.documentElement.clientHeight;
+            const { scrollHeight, clientHeight } = document.documentElement;
+
+            const totalScroll = scrollHeight - clientHeight;
             const scrollPosition = window.scrollY;
             const scrollPercentage = (scrollPosition / totalScroll) * 100;
 
-            progressRef.current.style.width = `${scrollPercentage}%`;
+            if (progressRef.current) {
+                progressRef.current.style.width = `${scrollPercentage}%`;
+
+                if (scrollPercentage === 100) {
+                    progressRef.current.classList.add('done');
+                    progressRef.current.innerHTML =
+                        '<p>Thank you for your interest buddy &#x2764;&#xFE0F;</p>';
+                } else {
+                    progressRef.current.classList.remove('done');
+                    progressRef.current.innerHTML = '';
+                }
+            }
         };
 
         window.addEventListener('scroll', handleScroll);

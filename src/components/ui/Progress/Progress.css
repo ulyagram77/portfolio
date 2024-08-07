@@ -1,13 +1,40 @@
 .scroll-progress {
     position: fixed;
-    height: 3px;
-    top: 0;
+    height: 5px;
+    bottom: 0;
     left: 0;
     background-color: #915eff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     animation: scroll-progress linear;
+    transition: 0.2s all ease-out;
     z-index: 10;
+}
+
+.scroll-progress.done {
+    background-color: #11cc00;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 320px) {
+    .scroll-progress.done {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 640px) {
+    .scroll-progress.done {
+        padding: 15px 0;
+        font-size: 15px;
+    }
 }
 
 @keyframes scroll-progress {
