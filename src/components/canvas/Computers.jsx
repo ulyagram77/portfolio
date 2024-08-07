@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 import { Suspense } from 'react';
-import PropTypes from 'prop-types';
-import { Canvas } from '@react-three/fiber';
+
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import PropTypes from 'prop-types';
+
 import { useMatchMedia } from '@/hooks';
+
 import { CanvasLoader } from '../ui';
 
 const Computers = ({ isMobile }) => {

@@ -1,43 +1,37 @@
-import logo from './logo.svg';
 import backend from './backend.png';
+import cv from './certificates/CV_Ulianov_Kyrylo_Front-end developer.pdf';
+import sniffCertificate from './certificates/sniff.pdf';
+import khpi from './company/khpi.png';
+import sigma from './company/sigma.png';
+import skiftech from './company/skiftech.png';
+import step from './company/step.png';
+import udemy from './company/udemy.png';
 import creator from './creator.png';
-import mobile from './mobile.png';
-import web from './web.png';
-import github from './github.png';
 import demo from './demo.svg';
-
+import error from './error.gif';
+import github from './github.png';
+import logo from './logo.svg';
+import mobile from './mobile.png';
+import marvel from './projects/marvel.png';
+import pulse from './projects/pulse.png';
+import sneaks from './projects/sneaks.png';
+import table from './projects/table.png';
+import xopen from './projects/xopen.png';
+import githubContacts from './social/github.svg';
+import instagramContacts from './social/instagram.svg';
+import telegramContacts from './social/telegram.svg';
 import css from './tech/css.png';
 import figma from './tech/figma.png';
+import firebase from './tech/firebase.png';
 import git from './tech/git.png';
 import html from './tech/html.png';
 import javascript from './tech/javascript.png';
-import typescript from './tech/typescript.png';
 import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import threejs from './tech/threejs.svg';
-import firebase from './tech/firebase.png';
-
-import step from './company/step.png';
-import udemy from './company/udemy.png';
-import khpi from './company/khpi.png';
-import sigma from './company/sigma.png';
-import skiftech from './company/skiftech.png';
-
-import marvel from './projects/marvel.png';
-import table from './projects/table.png';
-import sneaks from './projects/sneaks.png';
-import xopen from './projects/xopen.png';
-import pulse from './projects/pulse.png';
-
-import sniffCertificate from './certificates/sniff.pdf';
-import cv from './certificates/CV_Ulianov_Kyrylo_Front-end developer.pdf';
-
-import githubContacts from './social/github.svg';
-import telegramContacts from './social/telegram.svg';
-import instagramContacts from './social/instagram.svg';
-
-import error from './error.gif';
+import typescript from './tech/typescript.png';
+import web from './web.png';
 
 export {
     logo,

@@ -1,15 +1,17 @@
 /* eslint-disable react/no-unknown-property */
-import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { Tilt } from 'react-tilt';
+
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { fadeIn, textVariant } from '@/utils/motion';
+
+import { services } from '@/constants';
 import { withSectionWrapper } from '@/hoc';
 import { styles } from '@/styles';
-import { services } from '@/constants';
+import { fadeIn, textVariant } from '@/utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => {
     return (

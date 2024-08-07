@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
+
 import { ErrorBoundary } from './components/common';
-import { Progress } from './components/ui';
 import {
     About,
     Contact,
@@ -11,6 +11,7 @@ import {
     Tech,
     Works,
 } from './components/sections';
+import { Progress } from './components/ui';
 
 const AppContent = () => {
     return (

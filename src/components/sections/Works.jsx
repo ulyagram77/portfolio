@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from 'react';
 
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { fadeIn, textVariant } from '@/utils/motion';
+
+import { motion } from 'framer-motion';
+
 import { demo, github } from '@/assets';
+import { projects } from '@/constants';
 import { withSectionWrapper } from '@/hoc';
 import { styles } from '@/styles';
-import { projects } from '@/constants';
+import { fadeIn, textVariant } from '@/utils/motion';
 
 const ProjectCard = ({
     index,

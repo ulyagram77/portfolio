@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+
 import { Preloader } from './components/ui';
 
 const AppContent = lazy(() => import('./AppContent'));

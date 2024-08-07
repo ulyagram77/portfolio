@@ -1,15 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import PropTypes from 'prop-types';
-import { withSectionWrapper } from '@/hoc';
-import { textVariant } from '@/utils/motion';
-import { styles } from '@/styles';
-import { experiences } from '@/constants';
 import 'react-vertical-timeline-component/style.min.css';
+
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+
+import { experiences } from '@/constants';
+import { withSectionWrapper } from '@/hoc';
+import { styles } from '@/styles';
+import { textVariant } from '@/utils/motion';
 
 const ExperienceCard = ({ experience }) => {
     const { t } = useTranslation();

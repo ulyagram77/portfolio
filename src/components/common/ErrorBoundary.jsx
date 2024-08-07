@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
 import { Component } from 'react';
+
 import { ErrorMessage } from '.';
+import PropTypes from 'prop-types';
 
 class ErrorBoundary extends Component {
     state = {

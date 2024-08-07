@@ -1,13 +1,15 @@
+import { lazy } from 'react';
+
+import { useTranslation } from 'react-i18next';
+
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-import { lazy } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { technologies } from '@/constants';
 import { withSectionWrapper } from '@/hoc';
 import { useMatchMedia } from '@/hooks';
-import { fadeIn, textVariant } from '@/utils/motion';
 import { styles } from '@/styles';
-import { technologies } from '@/constants';
+import { fadeIn, textVariant } from '@/utils/motion';
 
 const BallCanvas = lazy(() => import('../canvas/Ball'));
 

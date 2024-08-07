@@ -1,12 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+
 import { motion } from 'framer-motion';
-import { useMatchMedia } from '@/hooks';
-import { styles } from '@/styles';
+
 import { logo } from '@/assets';
 import { navLinks } from '@/constants';
+import { useMatchMedia } from '@/hooks';
+import { styles } from '@/styles';
+
 import { MenuIcon } from '../ui';
 
 const LangButtons = () => {

@@ -1,6 +1,9 @@
-import { Portal } from '@/components/common';
 import { useEffect, useRef } from 'react';
+
 import { useTranslation } from 'react-i18next';
+
+import { Portal } from '@/components/common';
+
 import './Progress.css';
 
 const Progress = () => {
