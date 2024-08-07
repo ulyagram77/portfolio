@@ -27,9 +27,13 @@ const Progress = () => {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        const optimizedHandleScroll = () => {
+            window.requestAnimationFrame(handleScroll);
+        };
+
+        window.addEventListener('scroll', optimizedHandleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', optimizedHandleScroll);
         };
     }, []);
 
