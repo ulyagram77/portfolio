@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 import { defineConfig } from 'vite';
+import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import legacy from '@vitejs/plugin-legacy';
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         react(),
@@ -12,14 +13,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            src: '/src',
-            components: '/src/components',
-            hoc: '/src/hoc',
-            assets: '/src/assets',
-            constants: '/src/constants',
-            utils: '/src/utils',
-            hooks: '/src/hooks',
-            styles: '/src/styles',
+            '@': path.resolve(__dirname, './src'),
         },
     },
 });

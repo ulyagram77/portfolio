@@ -3,9 +3,8 @@ import { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-
-import { useMathcMedia } from 'src/hooks';
-import { CanvasLoader } from '../waiters';
+import { useMatchMedia } from '@/hooks';
+import { CanvasLoader } from '../ui';
 
 const Computers = ({ isMobile }) => {
     const computer = useGLTF('./desktop_pc/scene.gltf');
@@ -33,7 +32,7 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-    const { isMobile } = useMathcMedia();
+    const { isMobile } = useMatchMedia();
 
     return (
         <Canvas

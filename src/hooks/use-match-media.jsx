@@ -6,7 +6,7 @@ const queries = [
     '(min-width: 1200px)',
 ];
 
-export const useMathcMedia = () => {
+export const useMatchMedia = () => {
     const mediaQuerryLists = queries.map(query => matchMedia(query));
 
     const getValues = () => mediaQuerryLists.map(mgl => mgl.matches);

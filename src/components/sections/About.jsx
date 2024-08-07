@@ -6,11 +6,10 @@ import { useEffect } from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-
-import { styles } from 'src/styles/styles';
-import { services } from 'src/constants';
-import { fadeIn, textVariant } from 'src/utils/motion';
-import { withSectionWrapper } from 'src/hoc';
+import { fadeIn, textVariant } from '@/utils/motion';
+import { withSectionWrapper } from '@/hoc';
+import { styles } from '@/styles';
+import { services } from '@/constants';
 
 const ServiceCard = ({ index, title, icon }) => {
     return (

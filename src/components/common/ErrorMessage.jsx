@@ -1,4 +1,4 @@
-import { error } from 'src/assets';
+import { error } from '@/assets';
 
 const ErrorMessage = () => {
     return (

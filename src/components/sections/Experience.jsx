@@ -5,12 +5,10 @@ import {
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-
-import { styles } from 'src/styles/styles';
-import { experiences } from 'src/constants';
-import { withSectionWrapper } from 'src/hoc';
-import { textVariant } from 'src/utils/motion';
-
+import { withSectionWrapper } from '@/hoc';
+import { textVariant } from '@/utils/motion';
+import { styles } from '@/styles';
+import { experiences } from '@/constants';
 import 'react-vertical-timeline-component/style.min.css';
 
 const ExperienceCard = ({ experience }) => {

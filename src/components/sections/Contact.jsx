@@ -3,10 +3,9 @@ import { useState, useRef, useCallback, lazy } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
-
-import { styles } from 'src/styles/styles';
-import { withSectionWrapper } from 'src/hoc';
-import { slideIn } from 'src/utils/motion';
+import { withSectionWrapper } from '@/hoc';
+import { slideIn } from '@/utils/motion';
+import { styles } from '@/styles';
 
 const EarthCanvas = lazy(() => import('../canvas/Earth'));
 

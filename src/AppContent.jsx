@@ -1,16 +1,16 @@
-import { lazy } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { ErrorBoundary } from './components/waiters';
+import { ErrorBoundary } from './components/common';
 import { Progress } from './components/ui';
-
-const Hero = lazy(() => import('components/sections/Hero.jsx'));
-const About = lazy(() => import('components/sections/About.jsx'));
-const Contact = lazy(() => import('components/sections/Contact.jsx'));
-const Experience = lazy(() => import('components/sections/Experience.jsx'));
-const Navbar = lazy(() => import('components/sections/Navbar.jsx'));
-const Tech = lazy(() => import('components/sections/Tech.jsx'));
-const Works = lazy(() => import('components/sections/Works.jsx'));
-const StarsCanvas = lazy(() => import('components/canvas/Stars.jsx'));
+import {
+    About,
+    Contact,
+    Experience,
+    Hero,
+    Navbar,
+    StarsCanvas,
+    Tech,
+    Works,
+} from './components/sections';
 
 const AppContent = () => {
     return (

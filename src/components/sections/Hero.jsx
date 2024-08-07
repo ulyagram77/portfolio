@@ -3,8 +3,7 @@ import { lazy } from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { useTranslation } from 'react-i18next';
-
-import { styles } from 'src/styles/styles';
+import { styles } from '@/styles';
 
 const ComputersCanvas = lazy(() => import('../canvas/Computers'));
 

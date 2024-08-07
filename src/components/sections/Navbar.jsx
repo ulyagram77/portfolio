@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { useMathcMedia } from 'src/hooks';
-import { styles } from 'styles/styles';
-import { navLinks } from 'src/constants';
-import { logo } from 'src/assets';
+import { useMatchMedia } from '@/hooks';
+import { styles } from '@/styles';
+import { logo } from '@/assets';
+import { navLinks } from '@/constants';
 import { MenuIcon } from '../ui';
 
 const LangButtons = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
     const [active, setActive] = useState('');
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const { isDesktop } = useMathcMedia();
+    const { isDesktop } = useMatchMedia();
     const { t } = useTranslation();
 
     useEffect(() => {

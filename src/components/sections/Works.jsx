@@ -3,12 +3,11 @@ import { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-
-import { styles } from 'src/styles/styles';
-import { github, demo } from 'src/assets';
-import { withSectionWrapper } from 'src/hoc';
-import { projects } from 'src/constants';
-import { fadeIn, textVariant } from 'src/utils/motion';
+import { fadeIn, textVariant } from '@/utils/motion';
+import { demo, github } from '@/assets';
+import { withSectionWrapper } from '@/hoc';
+import { styles } from '@/styles';
+import { projects } from '@/constants';
 
 const ProjectCard = ({
     index,
