@@ -19,7 +19,7 @@ const Progress = () => {
                 if (scrollPercentage === 100) {
                     progressRef.current.classList.add('done');
                     progressRef.current.innerHTML =
-                        '<p>Thank you for your interest buddy &#x2764;&#xFE0F;</p>';
+                        '<p>Thanks for your interest buddy &#x2764;&#xFE0F;</p>';
                 } else {
                     progressRef.current.classList.remove('done');
                     progressRef.current.innerHTML = '';
