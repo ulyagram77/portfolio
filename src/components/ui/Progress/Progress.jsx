@@ -1,8 +1,10 @@
 import { Portal } from '@/components/common';
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Progress.css';
 
 const Progress = () => {
+    const { t } = useTranslation();
     const progressRef = useRef();
 
     useEffect(() => {
@@ -18,8 +20,7 @@ const Progress = () => {
 
                 if (scrollPercentage >= 99) {
                     progressRef.current.classList.add('done');
-                    progressRef.current.innerHTML =
-                        '<p>Thanks for your interest buddy &#x2764;&#xFE0F;</p>';
+                    progressRef.current.innerHTML = `<p>${t('progress.finished')} &#x2764;&#xFE0F;</p>`;
                 } else {
                     progressRef.current.classList.remove('done');
                     progressRef.current.innerHTML = '';

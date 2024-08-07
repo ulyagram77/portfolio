@@ -145,5 +145,9 @@
                 "loading": "Sending..."
             }
         }
+    },
+
+    "progress": {
+        "finished": "Thanks for your interest buddy"
     }
 }
