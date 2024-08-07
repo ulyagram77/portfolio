@@ -16,7 +16,7 @@ const Progress = () => {
             if (progressRef.current) {
                 progressRef.current.style.width = `${scrollPercentage}%`;
 
-                if (scrollPercentage === 100) {
+                if (Math.abs(scrollPercentage - 100) < 0.1) {
                     progressRef.current.classList.add('done');
                     progressRef.current.innerHTML =
                         '<p>Thanks for your interest buddy &#x2764;&#xFE0F;</p>';
