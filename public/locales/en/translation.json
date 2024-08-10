@@ -149,5 +149,11 @@
 
     "progress": {
         "finished": "Thanks for your interest buddy"
+    },
+
+    "validation": {
+        "required": "Please fill this field.",
+        "name": "Name is too short.",
+        "email": "Email has incorrect syntax."
     }
 }
