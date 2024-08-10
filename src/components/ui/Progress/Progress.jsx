@@ -39,6 +39,7 @@ const Progress = () => {
         return () => {
             window.removeEventListener('scroll', optimizedHandleScroll);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

@@ -1,8 +1,10 @@
 .scroll-progress {
     position: fixed;
     height: 5px;
+
     bottom: 0;
     left: 0;
+
     background-color: #915eff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -12,8 +14,7 @@
 }
 
 .scroll-progress.done {
-    background-color: #11cc00;
-    color: #000;
+    @apply bg-emerald-500 text-neutral-800;
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
@@ -32,8 +33,8 @@
 
 @media (min-width: 640px) {
     .scroll-progress.done {
-        padding: 15px 0;
-        font-size: 15px;
+        padding: 14px 0;
+        font-size: 14px;
     }
 }
 
