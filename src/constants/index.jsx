@@ -261,6 +261,29 @@ const projects = [
     },
 ];
 
-const contacts = [githubContacts, telegramContacts, instagramContacts];
+const validationShema = {
+    name: {
+        isEmpty: { message: 'validation.required' },
+        min: { value: 2, message: 'validation.name' },
+    },
+    email: {
+        isEmpty: { message: 'validation.required' },
+        email: { message: 'validation.email' },
+    },
+    message: { isEmpty: { message: 'validation.required' } },
+};
 
-export { services, technologies, experiences, projects, contacts };
+const socialIcons = [
+    { icon: githubContacts, link: 'https://github.com/ulyagram77' },
+    { icon: telegramContacts, link: 'https://t.me/Flaming77' },
+    { icon: instagramContacts, link: 'https://www.instagram.com/ulyagram77' },
+];
+
+export {
+    services,
+    technologies,
+    experiences,
+    projects,
+    socialIcons,
+    validationShema,
+};
