@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    position: relative;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,13 +35,26 @@
 }
 
 .btn:disabled {
-    filter: grayscale(0.5);
+    @apply bg-zinc-700 text-gray-500;
+    cursor: not-allowed;
+}
+
+.social__icon {
+    transition: 0.2s all ease-in-out;
 }
 
 @media (any-hover: hover) {
-    .btn:hover {
+    .btn:not(:disabled):hover {
         background-color: #915eff;
         transform: skew(-10deg);
+    }
+
+    .social:hover > :not(:hover) {
+        opacity: 0.2;
+    }
+
+    .social:hover > :hover {
+        transform: scale(1.2);
     }
 }
 
