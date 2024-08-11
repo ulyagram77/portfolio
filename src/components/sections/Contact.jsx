@@ -162,7 +162,7 @@ const Contact = withSectionWrapper(() => {
             </div>
 
             <ConfettiEffect show={trigger} />
-            <Modal isOpen={showModal} onClose={setShowModal} />
+            <Modal open={showModal} setOpen={setShowModal} />
         </>
     );
 }, 'contact');
