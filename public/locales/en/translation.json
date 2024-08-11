@@ -148,12 +148,19 @@
     },
 
     "progress": {
-        "finished": "Thanks for your interest buddy"
+        "finished": "Many thanks for your time buddy"
     },
 
     "validation": {
         "required": "Please fill this field.",
         "name": "Name is too short.",
         "email": "Email has incorrect syntax."
+    },
+
+    "modal": {
+        "title": "Success",
+        "subtitle": "alert",
+        "text": "Great! I will try to reply you as soon as possible. You can also find me in social media below.",
+        "wish": "Have a nice and productive day!"
     }
 }

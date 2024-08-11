@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
@@ -8,6 +10,8 @@ import { socialIcons } from '@/constants';
 import { styles } from '@/styles';
 
 const Modal = ({ open, setOpen }) => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         if (open) {
             document.body.classList.add('overflow-hidden');
@@ -53,22 +57,21 @@ const Modal = ({ open, setOpen }) => {
 
                             <div className="flex flex-col justify-between items-center h-full text-center">
                                 <div>
-                                    <p className={styles.sectionSubText}>alert</p>
+                                    <p className={styles.sectionSubText}>
+                                        {t('modal.subtitle')}
+                                    </p>
                                     <h2 className={styles.sectionHeadText}>
-                                        &#128293; Success &#128293;
+                                        &#128293; {t('modal.title')} &#128293;
                                     </h2>
                                 </div>
 
                                 <p className="text-secondary text-[16px] sm:text-lg">
-                                    Thank you for your interest in my activities, I
-                                    will try to reply you as soon as possible. You
-                                    can also find me in
-                                    <b> social media </b> below.
+                                    {t('modal.text')}
                                 </p>
 
                                 <p>
                                     <b className="text-md sm:text-lg">
-                                        Have a nice and productive day! &#128526;
+                                        {t('modal.wish')} &#128526;
                                     </b>
                                 </p>
 
