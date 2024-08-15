@@ -11,10 +11,11 @@ import {
     khpi,
     marvel,
     mobile,
+    netronic,
+    optiflowCertificate,
     reactjs,
     redux,
     sigma,
-    skiftech,
     sneaks,
     sniffCertificate,
     step,
@@ -167,8 +168,8 @@ const experiences = [
     {
         title: 'experience.timeline.elements.4.title',
         company_name: 'experience.timeline.elements.4.company_name',
-        icon: skiftech,
-        iconBg: 'black',
+        icon: netronic,
+        iconBg: '#000',
         date: 'experience.timeline.elements.4.date',
         points: [
             'experience.timeline.elements.4.points.0',
@@ -179,6 +180,7 @@ const experiences = [
             'experience.timeline.elements.4.points.5',
         ],
         github: 'https://github.com/Skiftech-project',
+        certificate: optiflowCertificate,
     },
 ];
 

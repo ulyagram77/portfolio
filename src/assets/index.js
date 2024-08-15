@@ -1,7 +1,9 @@
 import backend from './backend.png';
 import cv from './certificates/CV_Ulianov_Kyrylo_Front-end developer.pdf';
+import optiflowCertificate from './certificates/optiflow.pdf';
 import sniffCertificate from './certificates/sniff.pdf';
 import khpi from './company/khpi.png';
+import netronic from './company/netronic.png';
 import sigma from './company/sigma.png';
 import skiftech from './company/skiftech.png';
 import step from './company/step.png';
@@ -60,7 +62,9 @@ export {
     udemy,
     khpi,
     sigma,
+    netronic,
     sniffCertificate,
+    optiflowCertificate,
     cv,
     skiftech,
     githubContacts,
