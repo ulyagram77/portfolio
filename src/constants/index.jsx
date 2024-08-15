@@ -13,6 +13,7 @@ import {
     mobile,
     netronic,
     optiflowCertificate,
+    pulse,
     reactjs,
     redux,
     sigma,
@@ -31,7 +32,7 @@ import {
 
 export const navLinks = [
     {
-        id: 'work',
+        id: 'experience',
         title: 'navbar.links.experience',
     },
     {
@@ -236,7 +237,7 @@ const projects = [
                 color: 'green-text-gradient',
             },
             {
-                name: 'swiper',
+                name: 'scss',
                 color: 'pink-text-gradient',
             },
         ],
@@ -260,6 +261,23 @@ const projects = [
         image: xopen,
         source_code_link: 'https://github.com/ulyagram77/X-OPEN_Landing',
         demo_link: 'https://ulyagram77.github.io/X-OPEN_Landing/',
+    },
+    {
+        name: 'Pulse Store',
+        description: 'works.projects.4.description',
+        tags: [
+            {
+                name: 'vanilla-js',
+                color: 'yellow-text-gradient',
+            },
+            {
+                name: 'scss',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: pulse,
+        source_code_link: 'https://github.com/ulyagram77/Pulse_Landing',
+        demo_link: 'https://ulyagram77.github.io/Pulse_Landing/',
     },
 ];
 

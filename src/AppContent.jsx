@@ -1,4 +1,6 @@
-import { BrowserRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+
+import { useLocation } from 'react-router-dom';
 
 import { ErrorBoundary } from './components/common';
 import {
@@ -14,8 +16,19 @@ import {
 import { Progress } from './components/ui';
 
 const AppContent = () => {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.substring(1));
+            if (element) {
+                element.scrollIntoView();
+            }
+        }
+    }, [hash]);
+
     return (
-        <BrowserRouter>
+        <>
             <Progress />
             <main className="relative z-0 bg-primary">
                 <section className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
@@ -41,7 +54,7 @@ const AppContent = () => {
                     </ErrorBoundary>
                 </section>
             </main>
-        </BrowserRouter>
+        </>
     );
 };
 

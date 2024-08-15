@@ -103,10 +103,7 @@ const Navbar = () => {
                             onClick={() => setActive(nav.title)}
                         >
                             {nav.href ? (
-                                <a
-                                    href={`#${nav.id}`}
-                                    onClick={() => window.open(nav.href, '_blank')}
-                                >
+                                <a onClick={() => window.open(nav.href, '_blank')}>
                                     {t(nav.title)}
                                 </a>
                             ) : (

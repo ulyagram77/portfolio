@@ -5,7 +5,6 @@ import sniffCertificate from './certificates/sniff.pdf';
 import khpi from './company/khpi.png';
 import netronic from './company/netronic.png';
 import sigma from './company/sigma.png';
-import skiftech from './company/skiftech.png';
 import step from './company/step.png';
 import udemy from './company/udemy.png';
 import creator from './creator.png';
@@ -66,7 +65,6 @@ export {
     sniffCertificate,
     optiflowCertificate,
     cv,
-    skiftech,
     githubContacts,
     instagramContacts,
     telegramContacts,

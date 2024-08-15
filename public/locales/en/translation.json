@@ -117,6 +117,9 @@
             },
             {
                 "description": "Simple landing page with css-transitions, hovers and animations. It takes minimal script and many css. It was one of the first own projects."
+            },
+            {
+                "description": "Small online heart rate monitor shop with a nice responsive interface and animations using JS and some extra libs. "
             }
         ]
     },

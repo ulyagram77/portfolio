@@ -93,7 +93,7 @@ const Experience = withSectionWrapper(() => {
             </div>
         </>
     );
-}, 'work');
+}, 'experience');
 
 ExperienceCard.propTypes = {
     experience: PropTypes.object,
