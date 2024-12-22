@@ -91,6 +91,20 @@ body {
     border: 2px solid #050816;
 }
 
+@supports not (backdrop-filter: url('#svgfilter')) {
+    .navbar {
+        backdrop-filter: blur(31px);
+    }
+}
+
+/* Если backdrop-filter поддерживается */
+@supports (backdrop-filter: url('#svgfilter')) {
+    .navbar {
+        backdrop-filter: url('#svgfilter');
+        -webkit-backdrop-filter: url('#svgfilter'); /* for Safari */
+    }
+}
+
 /* animations */
 
 @keyframes mulShdSpin {

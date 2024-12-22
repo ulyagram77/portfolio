@@ -13,7 +13,7 @@ import {
     Tech,
     Works,
 } from './components/sections';
-import { Progress } from './components/ui';
+import { IceSvgFilter, Progress } from './components/ui';
 
 const AppContent = () => {
     const { hash } = useLocation();
@@ -54,6 +54,7 @@ const AppContent = () => {
                     </ErrorBoundary>
                 </section>
             </main>
+            <IceSvgFilter />
         </>
     );
 };

@@ -9,6 +9,7 @@ import { logo } from '@/assets';
 import { navLinks } from '@/constants';
 import { useMatchMedia } from '@/hooks';
 import { styles } from '@/styles';
+import { cn } from '@/utils/cn';
 
 import { MenuIcon } from '../ui';
 
@@ -67,13 +68,21 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`${
-                styles.paddingX
-            } w-full flex items-center py-5 fixed top-0 z-20 transition-visibility ease-in-out duration-300 ${
-                scrolled ? 'bg-primary' : 'bg-transparent'
-            }`}
+            className={cn(
+                styles.paddingX,
+                'backdrop-filter-none w-full flex items-center py-5 fixed top-0 z-20 transition-visibility ease-in-out duration-300',
+                { navbar: scrolled },
+            )}
         >
-            <div className="w-full flex items-center max-w-7xl mx-auto gap-8">
+            <div
+                className={cn(
+                    'absolute inset-0 bg-none z-0 transition-colors ease-in-out duration-300',
+                    {
+                        'bg-primary/70': scrolled,
+                    },
+                )}
+            ></div>
+            <div className="w-full flex items-center max-w-7xl mx-auto gap-8 z-10">
                 <Link
                     to="/"
                     className="flex flex-1 items-center gap-2"
