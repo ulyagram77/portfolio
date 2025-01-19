@@ -11,7 +11,9 @@ import {
     khpi,
     marvel,
     mobile,
+    nest,
     netronic,
+    next,
     optiflowCertificate,
     pulse,
     reactjs,
@@ -26,6 +28,7 @@ import {
     threejs,
     typescript,
     udemy,
+    viso,
     web,
     xopen,
 } from '../assets';
@@ -85,6 +88,10 @@ const technologies = [
         icon: reactjs,
     },
     {
+        name: 'Next JS',
+        icon: next,
+    },
+    {
         name: 'Redux Toolkit',
         icon: redux,
     },
@@ -101,6 +108,10 @@ const technologies = [
         icon: firebase,
     },
     {
+        name: 'Nest JS',
+        icon: nest,
+    },
+    {
         name: 'Git',
         icon: git,
     },
@@ -115,7 +126,7 @@ const experiences = [
         title: 'experience.timeline.elements.0.title',
         company_name: 'experience.timeline.elements.0.company_name',
         icon: step,
-        iconBg: '#E6DEDD',
+        iconBg: '#fff',
         date: 'experience.timeline.elements.0.date',
         points: [
             'experience.timeline.elements.0.points.0',
@@ -128,7 +139,7 @@ const experiences = [
         title: 'experience.timeline.elements.1.title',
         company_name: 'experience.timeline.elements.1.company_name',
         icon: udemy,
-        iconBg: '#E6DEDD',
+        iconBg: '#fff',
         date: 'experience.timeline.elements.1.date',
         points: [
             'experience.timeline.elements.1.points.0',
@@ -154,7 +165,7 @@ const experiences = [
         title: 'experience.timeline.elements.3.title',
         company_name: 'experience.timeline.elements.3.company_name',
         icon: sigma,
-        iconBg: '#E6DEDD',
+        iconBg: '#fff',
         date: 'experience.timeline.elements.3.date',
         points: [
             'experience.timeline.elements.3.points.0',
@@ -182,6 +193,19 @@ const experiences = [
         ],
         github: 'https://github.com/Skiftech-project',
         certificate: optiflowCertificate,
+    },
+    {
+        title: 'experience.timeline.elements.5.title',
+        company_name: 'experience.timeline.elements.5.company_name',
+        icon: viso,
+        iconBg: '#fff',
+        date: 'experience.timeline.elements.5.date',
+        points: [
+            'experience.timeline.elements.5.points.0',
+            'experience.timeline.elements.5.points.1',
+            'experience.timeline.elements.5.points.2',
+            'experience.timeline.elements.5.points.3',
+        ],
     },
 ];
 
