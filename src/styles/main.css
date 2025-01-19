@@ -91,19 +91,19 @@ body {
     border: 2px solid #050816;
 }
 
-@supports not (backdrop-filter: url('#svgfilter')) {
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
     .navbar {
-        backdrop-filter: blur(31px);
+        backdrop-filter: blur(10px);
     }
 }
 
 /* Если backdrop-filter поддерживается */
-@supports (backdrop-filter: url('#svgfilter')) {
+/* @supports (backdrop-filter: url('#svgfilter')) {
     .navbar {
         backdrop-filter: url('#svgfilter');
-        -webkit-backdrop-filter: url('#svgfilter'); /* for Safari */
+        -webkit-backdrop-filter: url('#svgfilter');
     }
-}
+} */
 
 /* animations */
 
